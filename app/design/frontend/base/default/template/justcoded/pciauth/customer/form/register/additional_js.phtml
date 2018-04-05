@@ -1,0 +1,20 @@
+<?php
+    $validatePasswordMsg = $this->__(
+        'Please enter %s or more characters. Leading or trailing spaces will be ignored.',
+        Mage::helper('justcoded_pciauth')->getPasswordMinLength()
+    );
+    $passwordMinLength = $this->getPasswordMinLength();
+?>
+
+<script type="text/javascript">
+    (function () {
+        var passwordMinLength = parseInt('<?php echo $passwordMinLength ?>');
+
+        Validation.addAllThese([
+            ['validate-password', '<?php echo addslashes($validatePasswordMsg) ?>', function(v) {
+                var pass = v.strip(); /*strip leading and trailing spaces*/
+                return !(pass.length > 0 && pass.length < passwordMinLength);
+            }]
+        ]);
+    })();
+</script>

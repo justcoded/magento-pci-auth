@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <validation_password_rewrite>
+        <reference name="before_body_end">
+            <block type="justcoded_pciauth/template" template="justcoded/pciauth/customer/form/register/additional_js.phtml"/>
+        </reference>
+    </validation_password_rewrite>
+
+    <customer_account_create>
+        <update handle="validation_password_rewrite" />
+    </customer_account_create>
+
+    <customer_account_login>
+        <update handle="validation_password_rewrite" />
+    </customer_account_login>
+
+    <customer_account_edit>
+        <update handle="validation_password_rewrite" />
+    </customer_account_edit>
+
+    <customer_account_changeforgotten>
+        <update handle="validation_password_rewrite" />
+    </customer_account_changeforgotten>
+</layout>

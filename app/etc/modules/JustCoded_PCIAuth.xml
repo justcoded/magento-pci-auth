@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <JustCoded_PCIAuth>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Customer/>
+            </depends>
+        </JustCoded_PCIAuth>
+    </modules>
+</config>

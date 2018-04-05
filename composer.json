@@ -1,0 +1,17 @@
+{
+    "name": "justcoded/pciauth",
+    "type": "magento-module",
+    "description": "Magento customer PCI Auth",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "extra": {
+        "map": [
+            ["app/etc/modules/JustCoded_PCIAuth.xml",                             "app/etc/modules/JustCoded_PCIAuth.xml"],
+            ["app/code/community/JustCoded/PCIAuth/",                             "app/code/community/JustCoded/PCIAuth/"],
+            ["app/design/frontend/base/default/layout/justcoded_pciauth.xml",     "app/design/frontend/base/default/layout/justcoded_pciauth.xml"],
+            ["app/design/frontend/base/default/template/justcoded/pciauth",       "app/design/frontend/base/default/template/justcoded/pciauth"],
+            ["app/locale/en_US/JustCoded_PCIAuth.csv",                            "app/locale/en_US/JustCoded_PCIAuth.csv"]
+        ]
+    }
+}
